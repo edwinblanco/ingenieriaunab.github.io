@@ -284,13 +284,14 @@ strong {
 }
 
 .navbar {
-  background: var(--navbar-bg-color);
+  background-color: var(--navbar-bg-color);
   z-index: 9;
   right: 0;
   left: 0;
   transition: all 0.3s;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  object-fit: contain;
 }
 
 .navbar-brand {
@@ -311,8 +312,8 @@ strong {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .navbar-nav .nav-link {
@@ -470,7 +471,7 @@ strong {
 .hero {
   position: relative;
   height: calc(98vh - 84px);
-  background: var(--navbar-bg-color);
+ 
 }
 
 .hero::after {
@@ -515,6 +516,8 @@ strong {
   height: 100%;
 }
 
+
+
 .date-text,
 .location-text {
   border: 1px solid var(--white-color);
@@ -537,6 +540,7 @@ strong {
 
 .speakers-thumb {
   position: relative;
+  height: 100%;
 }
 
 .speakers-thumb-small {
@@ -583,10 +587,11 @@ strong {
 
 .speakers-image {
   width: 100%;
+  object-fit: fill;
 }
 
 .speakers-text-info {
-  padding: 100px;
+  padding: 0px;
 }
 
 .speakers-title,
@@ -595,8 +600,24 @@ strong {
 }
 
 .speakers-text {
-  font-size: 12px;
+  font-size: 13px;
 }
+
+@media screen and (max-width: 1500px) {
+  .speakers-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .speakers-text {
+    font-size: 10px;
+  }
+  .speakers-thumb{
+    position: relative;
+  }
+}
+
 
 .speakers-featured-text {
   background: var(--secondary-color);
@@ -932,7 +953,7 @@ strong {
 -----------------------------------------*/
 @media screen and (max-width: 1500px) {
   .speakers-text-info {
-    padding: 50px;
+    padding: 5px;
   }
 }
 
@@ -982,7 +1003,7 @@ strong {
   }
 
   .hero {
-    height: calc(75vh - 78.39px);
+    height: calc(45vh - 78.39px);
   }
 
   .nav-tabs .nav-link {
